@@ -1,14 +1,23 @@
 @login @android
-Feature: Login
-
-  Background:
-    Given user is on login page
-    When user input username "admin"
-    When user input password "admin"
-    When user click button login
-    Then user successfully login
-    When user go to list menu
+Feature: Scroll, long press, and multiple tap functionality
 
   @test @positive
-  Scenario: Verify user successfully login when input valid email and password
+  Scenario: Scroll page functionality
+    Given user is already login
+    When user click hamburger button
+    And user click list menu
     And user do scroll
+
+  @test @positive
+  Scenario: Long press functionality
+    Given user is already login
+    When user click hamburger button
+    And user click list menu
+    And user do long press
+
+  @test @positive
+  Scenario: Multiple tap functionality
+    Given user is already login
+    When user click hamburger button
+    And user click list menu
+    And user do taps

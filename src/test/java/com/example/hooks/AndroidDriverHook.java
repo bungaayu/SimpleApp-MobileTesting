@@ -19,6 +19,11 @@ public class AndroidDriverHook {
   @After(value = "@android")
   public void afterScenario(Scenario scenario) {
     AndroidDriverInit.quit();
+//    if(scenario.isFailed()){
+//      TakesScreenshot screenshot = AndroidDriverInit.driver;
+//      byte[] imageByte = screenshot.getScreenshotAs(OutputType.BYTES);
+//      scenario.attach(imageByte, "image/png", scenario.getId());
+//    }
   }
 
   @BeforeStep

@@ -5,10 +5,12 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.When;
 
 public class NavigationMenuSteps extends BaseTest {
-  @When("user go to list menu")
-  public void userGoToListMenu() {
-    navigationMenu.clickHamburgerBtn();
-    navigationMenu.clickListMenu();
-  }
-
+    @When("user click hamburger button")
+    public void userClickHamburgerButton() {
+        navigationMenu.clickHamburgerButton();
+    }
+    @And("user click list menu")
+    public void userClickListMenu() {
+        navigationMenu.clickListMenu();
+    }
 }

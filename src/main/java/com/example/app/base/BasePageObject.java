@@ -20,6 +20,11 @@ public class BasePageObject {
     element.clear();
     element.sendKeys(text);
   }
+  public void type(By by, int number){
+    AndroidElement element = find(by);
+    element.clear();
+    element.sendKeys(Integer.toString(number));
+  }
 
   public void click(By by){
     find(by).click();
